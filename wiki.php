@@ -19,7 +19,7 @@ if(isset($_GET['content'])){
  $content = $_GET['content'];
     file_put_contents('wiki.txt',$content);
 }
-$safe_content = htmlentities(<h1>$content</h1>);
+$safe_content = htmlentities($content);
 echo $safe_content;
 
 ?>
