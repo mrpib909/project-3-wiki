@@ -23,6 +23,7 @@ if(isset($_GET['content'])){
 if(isset($_GET['name'])){
     
  $name = $_GET['name'];
+    file_put_contents('name.txt',$name);
     
 }
 $safe_content = htmlentities($content);
