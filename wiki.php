@@ -16,6 +16,12 @@ if(file_exists('wiki.txt')){
 } else{
  $content = '(no content)';   
 }
+if(file_exists('name.txt')){
+ $name = file_get_contents('name.txt');   
+}
+else{
+ $name = 'no name';   
+}
 if(isset($_GET['content'])){
  $content = $_GET['content'];
     file_put_contents('wiki.txt',$content);
