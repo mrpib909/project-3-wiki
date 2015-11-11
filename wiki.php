@@ -33,8 +33,8 @@ echo "Last edit by" . $the_name;
 <div class="edit">
 <form action="wiki.php">
     <textarea name="content" rows="8" cols="80">
-    </textarea>
-    <textarea name="name" rows="8" cols="40">
+    </textarea><br/>
+    <textarea name="name" value="Type name" rows="1" cols="40">
     </textarea>
     <input type="submit" value="save">
 </form>
