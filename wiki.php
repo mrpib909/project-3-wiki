@@ -19,16 +19,22 @@ if(file_exists('wiki.txt')){
 if(isset($_GET['content'])){
  $content = $_GET['content'];
     file_put_contents('wiki.txt',$content);
-    $lastedit = echo "Last Edit on" . date("Y/m/d");
+}
+if(isset($_GET['name'])){
+    
+ $name = $_GET['name'];
+    
 }
 $safe_content = htmlentities($content);
 echo $safe_content;
-echo $lastedit;
-
+$the_name = htmlentities($name);
+echo $the_name;
 ?>
 <div class="edit">
 <form action="wiki.php">
     <textarea name="content" rows="8" cols="80">
+    </textarea>
+    <textarea name="name" rows="8" cols="40">
     </textarea>
     <input type="submit" value="save">
 </form>
