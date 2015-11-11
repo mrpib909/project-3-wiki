@@ -7,6 +7,7 @@
     <title>Wiki</title>
 </head>
 <body>
+   <h1>Hello World what is on your mind today</h1>
     <?php
     
 if(file_exists('wiki.txt')){
@@ -23,10 +24,12 @@ $safe_content = htmlentities($content);
 echo $safe_content;
 
 ?>
+<div class="edit">
 <form action="wiki.php">
     <textarea name="content" rows="8" cols="80">
     </textarea>
     <input type="submit" value="save">
 </form>
+    </div>
 </body>
 </html>
