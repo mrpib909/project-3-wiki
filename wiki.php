@@ -19,7 +19,7 @@ if(file_exists('wiki.txt')){
 if(isset($_GET['content'])){
  $content = $_GET['content'];
     file_put_contents('wiki.txt',$content);
-    $lastedit = echo "Last Edit on" . date("Y/m/d")
+    $lastedit = echo "Last Edit on" . date("Y/m/d");
 }
 $safe_content = htmlentities($content);
 echo $safe_content;
