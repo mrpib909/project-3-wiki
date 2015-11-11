@@ -33,7 +33,7 @@ if(isset($_GET['name'])){
     
 }
 $safe_content = htmlentities($content);
-echo $safe_content . "<br/>";
+echo "<h2>" . $safe_content . "</h2>" . "<br/>";
 $the_name = htmlentities($name);
 echo "Last edit by" . $the_name;
 ?>
