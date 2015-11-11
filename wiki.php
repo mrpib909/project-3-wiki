@@ -28,7 +28,7 @@ if(isset($_GET['name'])){
 $safe_content = htmlentities($content);
 echo $safe_content;
 $the_name = htmlentities($name);
-echo $the_name;
+echo "Last edit by" . $the_name;
 ?>
 <div class="edit">
 <form action="wiki.php">
