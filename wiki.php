@@ -22,11 +22,11 @@ if(file_exists('name.txt')){
 else{
  $name = 'no name';   
 }
-if(isset($_POST['content'])){
+if(isset($_GET['content'])){
  $content = $_POST['content'];
     file_put_contents('wiki.txt',$content);
 }
-if(isset($_POST['name'])){
+if(isset($_GET['name'])){
     
  $name = $_POST['name'];
     file_put_contents('name.txt',$name);
