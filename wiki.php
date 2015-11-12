@@ -22,13 +22,13 @@ if(file_exists('name.txt')){
 else{
  $name = 'no name';   
 }
-if(isset($_GET['content'])){
- $content = $_GET['content'];
+if(isset($_POST['content'])){
+ $content = $_POST['content'];
     file_put_contents('wiki.txt',$content);
 }
-if(isset($_GET['name'])){
+if(isset($_POST['name'])){
     
- $name = $_GET['name'];
+ $name = $_POST['name'];
     file_put_contents('name.txt',$name);
     
 }
@@ -38,7 +38,7 @@ $the_name = htmlentities($name);
 echo "Last edit by: " . $the_name;
 ?>
 <div class="edit">
-<form action="wiki.php">
+<form action="wiki.php" method="post">
     Post <br/>
     <textarea name="content" rows="8" cols="80">
     </textarea><br/>
